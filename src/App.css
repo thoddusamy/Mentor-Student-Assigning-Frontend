@@ -1,38 +1,101 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* detail root variables */
+:root {
+  --font-serif: 'Montserrat', sans-serif;
+  --font-mono: 'Fuzzy Bubbles', cursive;
+  --color-text: #efeee7;
+  --color-bg: #223458;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.table {
+  margin: 30px auto 0px auto;
+  padding: 50px;
+}
+
+.drawer-icon {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  font-size: larger;
+  align-items: center;
+}
+
+.drawer-name {
+  font-family: var(--font-serif);
+}
+
+.form,
+.changementor-fromcontrol {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  gap: 20px;
+  padding: 0px 50px;
+}
+
+.findmentor-fromcontrol {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  gap: 20px;
+  padding: 0px 50px;
+}
+
+.add-student-centent,
+.add-mentor-centent {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
+  font-size: medium;
+  letter-spacing: 2px;
+  margin-top: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button {
+  padding: 12px;
+  border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-btn {
+  display: flex;
+  margin-top: 40px;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homepage {
+  padding: 5rem;
+}
+
+.list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 20px;
+  font-family: 'Fuzzy Bubbles', cursive;
+  letter-spacing: 1.5px;
 }
 
-.App-link {
-  color: #61dafb;
+.list>div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-page-title {
+  text-align: center;
+  font-family: var(--font-serif);
+  margin-bottom: 40px;
 }
