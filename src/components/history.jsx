@@ -13,7 +13,7 @@ import Paper from "@mui/material/Paper";
 import axios from "axios";
 
 export const api =
-  "http://localhost:6010/students";
+  "https://mentor-student-assigning.herokuapp.com/students";
 
 export function History() {
   const [students, setStudents] = useState([]);
@@ -113,7 +113,7 @@ function Student({ name, surname, email, mentorid, deleteButton, index }) {
   const num = index + 1;
 
   const mentorapi =
-    "http://localhost:6010/mentors";
+    "https://mentor-student-assigning.herokuapp.com/mentors";
 
   const [mentor, setMentor] = useState([]);
 

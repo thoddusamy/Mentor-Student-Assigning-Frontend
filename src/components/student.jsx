@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 
 export const api =
-  "http://localhost:6010/students";
+  "https://mentor-student-assigning.herokuapp.com/students";
 
 export function Students() {
 

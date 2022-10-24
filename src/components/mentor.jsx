@@ -15,7 +15,7 @@ import Paper from "@mui/material/Paper";
 import axios from 'axios'
 
 export const mentorapi =
-  "http://localhost:6010/mentors";
+  "https://mentor-student-assigning.herokuapp.com/mentors";
 
 export function Mentors() {
 

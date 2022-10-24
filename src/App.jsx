@@ -6,14 +6,14 @@ import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { History } from "./components/history";
 import { Students } from "./components/student";
 import { Mentors } from "./components/mentor";
@@ -23,15 +23,14 @@ import ChangeMentor from "./components/changeMentor";
 import AssignMentor from "./components/assignMentor";
 import FindByMentor from "./components/findbymentor";
 import Home from "./components/home";
-import HomeIcon from "@mui/icons-material/Home";
-import PeopleIcon from "@mui/icons-material/People";
-import GroupAddIcon from "@mui/icons-material/GroupAdd";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import AddBoxIcon from "@mui/icons-material/AddBox";
-import ChangeCircleIcon from "@mui/icons-material/ChangeCircle";
-import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
-import PersonSearchIcon from "@mui/icons-material/PersonSearch";
-import TimelineIcon from "@mui/icons-material/Timeline";
+import HouseSidingOutlinedIcon from '@mui/icons-material/HouseSidingOutlined';
+import EmojiPeopleOutlinedIcon from '@mui/icons-material/EmojiPeopleOutlined';
+import PlusOneOutlinedIcon from '@mui/icons-material/PlusOneOutlined';
+import AccessibilityOutlinedIcon from '@mui/icons-material/AccessibilityOutlined';
+import FindReplaceOutlinedIcon from '@mui/icons-material/FindReplaceOutlined';
+import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
+import SavedSearchOutlinedIcon from '@mui/icons-material/SavedSearchOutlined';
+import QueryStatsOutlinedIcon from '@mui/icons-material/QueryStatsOutlined';
 
 export default function App() {
 
@@ -55,47 +54,47 @@ export default function App() {
     {
       name: <div className="drawer-name">Home</div>,
       onClick: "/",
-      icon: <HomeIcon />,
+      icon: <HouseSidingOutlinedIcon />,
     },
     {
       name: <div className="drawer-name">students</div>,
       onClick: "/students",
-      icon: <PeopleIcon />,
+      icon: <EmojiPeopleOutlinedIcon />,
     },
     {
       name: <div className="drawer-name">Add-student</div>,
       onClick: "/students/add",
-      icon: <GroupAddIcon />,
+      icon: <PlusOneOutlinedIcon />,
     },
     {
       name: <div className="drawer-name">mentors</div>,
       onClick: "/mentors",
-      icon: <AccountCircleIcon />,
+      icon: <AccessibilityOutlinedIcon />,
     },
     {
       name: <div className="drawer-name">Add-Mentor</div>,
       onClick: "/mentors/add",
-      icon: <AddBoxIcon />,
+      icon: <PlusOneOutlinedIcon />,
     },
     {
       name: <div className="drawer-name">Change-mentor</div>,
       onClick: "/students/change-mentor",
-      icon: <ChangeCircleIcon />,
+      icon: <FindReplaceOutlinedIcon />,
     },
     {
       name: <div className="drawer-name">Assign-mentor</div>,
       onClick: "/students/assign-mentor",
-      icon: <AssignmentTurnedInIcon />,
+      icon: <AssignmentTurnedInOutlinedIcon />,
     },
     {
       name: <div className="drawer-name">Findby-mentor</div>,
       onClick: "/findbymentor",
-      icon: <PersonSearchIcon />,
+      icon: <SavedSearchOutlinedIcon />,
     },
     {
       name: <div className="drawer-name">OverAll-view</div>,
       onClick: "/history",
-      icon: <TimelineIcon />,
+      icon: <QueryStatsOutlinedIcon />,
     },
   ];
 
@@ -148,7 +147,7 @@ export default function App() {
                 <Fragment key={anchor}>
                   <Button color="inherit" onClick={toggleDrawer(anchor, true)}>
                     <div className="drawer-icon" style={style}>
-                      <MenuIcon />
+                      <MenuOpenIcon />
                       Menu
                     </div>
                   </Button>
@@ -167,7 +166,7 @@ export default function App() {
                 color="inherit"
                 style={{ marginLeft: "auto", fontFamily: "Fuzzy Bubbles" }}
                 startIcon={
-                  mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />
+                  mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />
                 }
                 onClick={() => {
                   setMode(mode === "light" ? "dark" : "light");
